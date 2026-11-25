@@ -1,10 +1,10 @@
 # Local config
-config/app.php
-!config/app.example.php
+# config/app.php
+# !config/app.example.php
 
 # Logs
-storage/logs/*
-!storage/logs/.gitkeep
+# storage/logs/*
+# !storage/logs/.gitkeep
 
 # OS
 .DS_Store

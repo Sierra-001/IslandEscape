@@ -1,0 +1,13 @@
+Options -Indexes
+RewriteEngine On
+
+# Block direct HTTP access to private folders
+RewriteRule ^(src|config|database|storage|app|scripts)(/|$) - [F,L]
+
+# Serve existing files.directories directly
+RewriteCond %{REQUEST_FILENAME} -f [OR]
+RewriteCond %{REQUEST_FILENAME} -d
+RewriteRULE ^ - [L]
+
+# Route everything else through the front controller
+RewriteRule ^ index.php [L,QSA]
